@@ -15,7 +15,7 @@ var db=mongoose.connection
 db.on('error',()=> console.log("error in connecting to database"))
 db.once('open',()=> console.log("connected to database"))
 
-app.post("/login.html",(req,res) =>{
+app.post("./public/login.html",(req,res) =>{
     var name=req.body.name
     var email=req.body.email
     var number=req.body.number
@@ -33,14 +33,14 @@ app.post("/login.html",(req,res) =>{
         }
         console.log("record inserted successful")
     })
-    return res.redirect('/login.html')
+    return res.redirect('./public/login.html')
 })
 
 app.get("/",(req,res) =>{
     res.set({
         "allow-acces-allow-orgin":'*'
     })
-    return res.redirect("/signup.html")
+    return res.redirect("./public/signup.html")
 }).listen(3500);
 
 
