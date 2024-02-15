@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="header">
+            <h1>Register here</h1>
+            <hr>
+        </div>
+        <form action="/login.html" method="post" class="form">
+            <div class="form-control">
+                <label for="Name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-control">
+                <label for="Email Id">Email Id</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email id" required>
+            </div>
+            <div class="form-control">
+                <label for="number">Mobile No</label>
+                <input type="number" name="number" id="number" placeholder="Enter your mobile no" required>
+            </div>
+            <div class="form-control">
+                <label for="Password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button onclick="submitbtn()">submit</button>
+        </form>
+        <p>Already have an account? <a href="/login.html">login here</a></p>
+    </div>
+</body>
+<script>
+    function submitbtn() {
+        alert("Registration sucessfully completed");
+    }
+</script>
+</html>
